@@ -29,10 +29,10 @@ export function needsLicense(kind) {
  */
 export function chooseVehicle(option1, option2) {
   // throw new Error('Please implement the chooseVehicle function');
-  if(option1 > option2){
-    return 'option1' + 'is clearly the better choice.';
+  if(option1 < option2){
+    return option1 + ' is clearly the better choice.';
   }else{
-    return 'option2' + 'is clearly the better choice.';
+    return option2 + ' is clearly the better choice.';
   }
 }
 
@@ -46,10 +46,10 @@ export function chooseVehicle(option1, option2) {
  */
 export function calculateResellPrice(originalPrice, age) {
   // throw new Error('Please implement the calculateResellPrice function');
-  if(age >= 10){
+  if(age > 10){
     return originalPrice*MORE_THAN_10_YEARS;
-  }else if(age >= 3 && age < 10){
-    return originalPrice*LESS_THAN_3_YEARS;
+  }else if(age >= 3 && age <= 10){
+    return originalPrice*LESS_THAN_10_YEARS;
   }else{
     return originalPrice*LESS_THAN_3_YEARS;
   }
